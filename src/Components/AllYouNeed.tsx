@@ -19,8 +19,8 @@ export default function AllYouNeed() {
             <li className=" flex gap-2 items-start">
               <CheckBadgeIcon className="w-12 text-lightBlue" />
               Solución Integral: Cubrimos todas tus necesidades logísticas,
-              desde transporte marítimo, aéreo y terrestre hasta almacenamiento
-              y última milla.
+              desde transporte aéreo y terrestre hasta almacenamiento y última
+              milla.
             </li>
             <li className=" flex gap-2 items-start">
               <CheckBadgeIcon className="w-12 text-lightBlue" />

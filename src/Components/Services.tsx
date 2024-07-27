@@ -10,7 +10,12 @@ export default function Services() {
       </h1>
       <div className=" hidden md:grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-32 justify-center p-5">
         {services.map((service) => (
-          <Card key={service.name} title={service.name} img={service.img} />
+          <Card
+            key={service.name}
+            title={service.name}
+            img={service.img}
+            description={service.description}
+          />
         ))}
       </div>
       <Tabs />

@@ -66,6 +66,36 @@ export default function ContactForm() {
             )}
           </div>
         </div>
+
+        <div>
+          <label htmlFor="email" className=" font-normal">
+            Correo empresarial*
+          </label>
+          <input
+            id="email"
+            type="text"
+            className=" w-full p-1 border border-gray-300 rounded"
+            {...register("email", {
+              required: "El correo es obligatorio",
+            })}
+          />
+          {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
+        </div>
+        <div>
+          <label htmlFor="phone" className=" font-normal">
+            Telefono*
+          </label>
+          <input
+            id="phone"
+            type="text"
+            className=" w-full p-1 border border-gray-300 rounded"
+            {...register("phone", {
+              required: "El telefono es obligatorio",
+            })}
+          />
+          {errors.phone && <ErrorMessage>{errors.phone.message}</ErrorMessage>}
+        </div>
+
         <div className=" md:flex gap-5">
           <div className=" md:w-1/2">
             <label htmlFor="company" className=" font-normal">
@@ -83,75 +113,6 @@ export default function ContactForm() {
               <ErrorMessage>{errors.company.message}</ErrorMessage>
             )}
           </div>
-          <div className=" md:w-1/2">
-            <label htmlFor="companyId" className=" font-normal">
-              RFC de la empresa*
-            </label>
-            <input
-              id="companyId"
-              type="text"
-              className=" w-full p-1 border border-gray-300 rounded"
-              {...register("companyId", {
-                required: "El RFC es obligatorio",
-              })}
-            />
-            {errors.companyId && (
-              <ErrorMessage>{errors.companyId.message}</ErrorMessage>
-            )}
-          </div>
-        </div>
-        <div className=" md:flex gap-5">
-          <div className=" md:w-1/2">
-            <label htmlFor="email" className=" font-normal">
-              Correo empresarial*
-            </label>
-            <input
-              id="email"
-              type="text"
-              className=" w-full p-1 border border-gray-300 rounded"
-              {...register("email", {
-                required: "El correo es obligatorio",
-              })}
-            />
-            {errors.email && (
-              <ErrorMessage>{errors.email.message}</ErrorMessage>
-            )}
-          </div>
-          <div className=" md:w-1/2">
-            <label htmlFor="phone" className=" font-normal">
-              Telefono*
-            </label>
-            <input
-              id="phone"
-              type="text"
-              className=" w-full p-1 border border-gray-300 rounded"
-              {...register("phone", {
-                required: "El telefono es obligatorio",
-              })}
-            />
-            {errors.phone && (
-              <ErrorMessage>{errors.phone.message}</ErrorMessage>
-            )}
-          </div>
-        </div>
-        <div className=" md:flex gap-5">
-          <div className=" md:w-1/2">
-            <label htmlFor="average" className=" font-normal">
-              Promedio de gasto lógistico mensual*
-            </label>
-            <select
-              name="average"
-              id=""
-              className=" w-full p-1 bg-white border border-gray-300 rounded"
-              defaultValue={initialValues.average}
-              onChange={() => {}}
-            >
-              {monthlyAverage.map((item) => (
-                <option key={item.id}>{item.content}</option>
-              ))}
-            </select>
-          </div>
-
           <div className=" md:w-1/2">
             <label htmlFor="serviceType" className=" font-normal">
               Tipo de servicio*

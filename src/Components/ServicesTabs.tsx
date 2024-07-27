@@ -9,7 +9,12 @@ export default function Tabs() {
         <TabPanels>
           {services.map((service) => (
             <TabPanel key={service.name}>
-              <Card key={service.name} title={service.name} img={service.img} />
+              <Card
+                key={service.name}
+                title={service.name}
+                img={service.img}
+                description={service.description}
+              />
             </TabPanel>
           ))}
         </TabPanels>

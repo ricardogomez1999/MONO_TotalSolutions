@@ -2,14 +2,20 @@ export const services = [
   {
     name: "Comercializadora",
     img: "flete",
+    description:
+      "Ofrecemos productos logísticos de alta calidad con transacciones eficientes. Trabajamos con proveedores confiables para asegurar tu satisfacción.",
   },
   {
     name: "Renta de mulas de patio",
     img: "mulaSeca",
+    description:
+      " Disponemos de mulas de patio en excelentes condiciones, listas para tus operaciones.",
   },
   {
     name: "Renta de cajas secas para almacen",
     img: "cajaSeca",
+    description:
+      "Alquilamos cajas secas bien conservadas para almacenamiento seguro y eficiente.",
   },
 ];
 
