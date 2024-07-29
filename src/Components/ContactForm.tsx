@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { QuoteFormData } from "../types";
 import ErrorMessage from "./ErrorMessage";
-import { monthlyAverage, serviceTypes } from "../data";
+import { serviceTypes } from "../data";
 
 export default function ContactForm() {
   const initialValues: QuoteFormData = {
