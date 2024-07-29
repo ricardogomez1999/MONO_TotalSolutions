@@ -13,8 +13,8 @@ export default function AllYouNeed() {
             <li className=" flex gap-2 items-start ">
               <CheckBadgeIcon className="w-12 text-lightBlue" />
               Operaciones Centralizadas: Gestiona todas tus operaciones
-              logísticas desde un solo lugar, desde cotizaciones hasta pagos y
-              facturas.
+              logísticas desde un solo lugar, desde cotizaciones hasta pagos,
+              facturas y más.
             </li>
             <li className=" flex gap-2 items-start">
               <CheckBadgeIcon className="w-12 text-lightBlue" />
