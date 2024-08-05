@@ -4,10 +4,8 @@ export type QuoteFormData = {
   name: string;
   lastname: string;
   company: string;
-  companyId: string;
   email: string;
   phone: number | null;
-  average: AverageType;
   serviceType: ServiceType;
 };
 

@@ -1,17 +1,21 @@
 import { useForm } from "react-hook-form";
 import { QuoteFormData } from "../types";
 import ErrorMessage from "./ErrorMessage";
+import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
 import { serviceTypes } from "../data";
+
+const serviceId = "service_5d6kboh";
+const templateId = "template_7n2umib";
+const publicId = "xOMplY3fFsgfnpCa5";
 
 export default function ContactForm() {
   const initialValues: QuoteFormData = {
     name: "",
     lastname: "",
     company: "",
-    companyId: "",
     email: "",
     phone: null,
-    average: "Selecciona",
     serviceType: "Selecciona",
   };
   const {
@@ -21,9 +25,17 @@ export default function ContactForm() {
     formState: { errors },
   } = useForm({ defaultValues: initialValues });
 
-  const handleEmail = () => {
-    console.log("from handle email");
-    reset();
+  const handleEmail = (data: QuoteFormData) => {
+    console.log(data);
+    emailjs.send(serviceId, templateId, data, publicId).then(
+      () => {
+        toast.success(`Message sent`);
+        reset();
+      },
+      (error) => {
+        toast.error(`Message not send, try again ${error}`);
+      }
+    );
   };
 
   return (
