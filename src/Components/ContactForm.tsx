@@ -5,10 +5,6 @@ import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 import { serviceTypes } from "../data";
 
-const serviceId = "service_5d6kboh";
-const templateId = "template_7n2umib";
-const publicId = "xOMplY3fFsgfnpCa5";
-
 export default function ContactForm() {
   const initialValues: QuoteFormData = {
     name: "",
@@ -27,15 +23,22 @@ export default function ContactForm() {
 
   const handleEmail = (data: QuoteFormData) => {
     console.log(data);
-    emailjs.send(serviceId, templateId, data, publicId).then(
-      () => {
-        toast.success(`Message sent`);
-        reset();
-      },
-      (error) => {
-        toast.error(`Message not send, try again ${error}`);
-      }
-    );
+    emailjs
+      .send(
+        import.meta.env.VITE_API_SERVICEID,
+        import.meta.env.VITE_API_TEMPLATEID,
+        data,
+        import.meta.env.VITE_API_PUBLICID
+      )
+      .then(
+        () => {
+          toast.success(`Message sent`);
+          reset();
+        },
+        (error) => {
+          toast.error(`Message not send, try again ${error}`);
+        }
+      );
   };
 
   return (
