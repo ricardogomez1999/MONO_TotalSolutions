@@ -22,7 +22,6 @@ export default function ContactForm() {
   } = useForm({ defaultValues: initialValues });
 
   const handleEmail = (data: QuoteFormData) => {
-    console.log(data);
     emailjs
       .send(
         import.meta.env.VITE_API_SERVICEID,
@@ -31,8 +30,9 @@ export default function ContactForm() {
         import.meta.env.VITE_API_PUBLICID
       )
       .then(
-        () => {
+        (response) => {
           toast.success(`Message sent successfully`);
+          console.log(response);
           reset();
         },
         (error) => {
@@ -133,11 +133,12 @@ export default function ContactForm() {
               Tipo de servicio*
             </label>
             <select
-              name="serviceType"
-              id=""
+              id="serviceType"
               className=" w-full p-1 bg-white border border-gray-300 rounded"
               defaultValue={initialValues.serviceType}
-              onChange={() => {}}
+              {...register("serviceType", {
+                required: "El servicio es obligatorio",
+              })}
             >
               {serviceTypes.map((item) => (
                 <option key={item.id}>{item.content}</option>
