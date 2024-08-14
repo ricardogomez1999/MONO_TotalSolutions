@@ -5,11 +5,9 @@ export default function Hero() {
     <div className=" h-screen md:h-auto flex items-center container mx-auto md:py-16 p-5 transition-all">
       <div className="flex flex-col md:w-1/2">
         <h1 className=" text-white/[.5] text-pretty text-5xl md:text-8xl uppercase font-bold">
-          soluciones integrales
-        </h1>
-        <h3 className=" font-semibold text-white/[.8] text-3xl md:text-3xl">
           Making your day a little easier
-        </h3>
+        </h1>
+
         <a
           className="group flex flex-row w-36 md:w-44 text-sm md:text-lg  bg-gradient-to-r from-darkBlue to-lightBlue p-3 my-5 text-white font-semibold rounded-sm items-center gap-2 "
           href="https://wa.me/+528443500355"
