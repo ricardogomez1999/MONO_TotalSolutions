@@ -8,7 +8,7 @@ export default function Hero() {
           soluciones integrales
         </h1>
         <h3 className=" font-semibold text-white/[.8] text-3xl md:text-3xl">
-          Nuestra experiencia - Tu ventaja competitiva
+          Making your day a little easier
         </h3>
         <a
           className="group flex flex-row w-36 md:w-44 text-sm md:text-lg  bg-gradient-to-r from-darkBlue to-lightBlue p-3 my-5 text-white font-semibold rounded-sm items-center gap-2 "
