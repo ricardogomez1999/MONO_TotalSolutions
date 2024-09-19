@@ -1,3 +1,4 @@
+import { InboxArrowDownIcon } from "@heroicons/react/20/solid";
 import ContactForm from "./ContactForm";
 
 export default function ContactUs() {
@@ -15,8 +16,21 @@ export default function ContactUs() {
         <div className=" hidden md:block bg-contact-us h-96 rounded-lg bg-cover bg-center"></div>
       </div>
 
-      <div className=" md:w-1/2 bg-primary/10 rounded-lg h-full">
-        <ContactForm />
+      <div className=" md:w-1/2">
+        <h1 className=" text-2xl font-bold">
+          <span className=" text-lightBlue">Llena el formulario </span> y
+          nosotros nos pondremos en contacto contigo!
+        </h1>
+        <div className=" flex gap-5 items-center p-4">
+          <h2>Tambien puedes mandarnos un email dando click aqui!</h2>
+          <a href="mailto:info@monots.com">
+            <InboxArrowDownIcon className=" w-8 text-lightBlue hover:text-grayText" />
+          </a>
+        </div>
+
+        <div className=" bg-primary/10 rounded-lg h-full p-5">
+          <ContactForm />
+        </div>
       </div>
     </div>
   );
