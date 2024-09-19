@@ -21,12 +21,14 @@ export default function ContactUs() {
           <span className=" text-lightBlue">Llena el formulario </span> y
           nosotros nos pondremos en contacto contigo!
         </h1>
-        <div className=" flex gap-5 items-center p-4">
+        <a
+          href="mailto:info@monots.com"
+          className=" flex gap-5 items-center p-4 hover:text-grayText cursor-pointer"
+        >
           <h2>Tambien puedes mandarnos un email dando click aqui!</h2>
-          <a href="mailto:info@monots.com">
-            <InboxArrowDownIcon className=" w-8 text-lightBlue hover:text-grayText" />
-          </a>
-        </div>
+
+          <InboxArrowDownIcon className=" w-8 text-lightBlue " />
+        </a>
 
         <div className=" bg-primary/10 rounded-lg h-full p-5">
           <ContactForm />
