@@ -1,21 +1,21 @@
 export const services = [
   {
+    name: "Logistica y transporte",
+    img: "mulaSeca",
+    description:
+      "Transporte Aéreo, Marítimo y Terrestre, Nacional e Internacional. Transporte Terrestre, LTL y FTL. Transporte Dedicado, HotShot - Sprinter - Plataforma, Caja Refrigerada. Almacenamiento a Corto y Largo Plazo. Agencia Aduanal",
+  },
+  {
     name: "Comercializadora",
     img: "flete",
     description:
-      "Ofrecemos productos logísticos de alta calidad con transacciones eficientes. Trabajamos con proveedores confiables para asegurar tu satisfacción.",
+      "Distribución de Diversos Productos. Venta al por Mayor y al por Menor. Gestión de inventarios y Lógistica de Distribución. Servicios de Importación y Exportación. Atención Personalizada y Gestión de Pedidos",
   },
   {
-    name: "Renta de mulas de patio",
-    img: "mulaSeca",
-    description:
-      " Disponemos de mulas de patio en excelentes condiciones, listas para tus operaciones.",
-  },
-  {
-    name: "Renta de cajas secas para almacen",
+    name: "Alquiler de equipo especializado",
     img: "cajaSeca",
     description:
-      "Alquilamos cajas secas bien conservadas para almacenamiento seguro y eficiente.",
+      "Renta de Mulas de Patio. Renta de Cajas Secas para Almacenamiento. Renta de Montacargas. Renta de Plataformas Elevadoras",
   },
 ];
 

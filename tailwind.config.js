@@ -17,10 +17,10 @@ export default {
         grayText: "#666666",
       },
       backgroundImage: {
-        "about-us": "url('/AboutUsBg.webp')",
+        "about-us": "url('/AboutUSMONO.webp')",
         "all-youneed": "url('/allYouNeed.webp')",
         "info-banner": "url('/infoBanner.webp')",
-        "contact-us": "url('/contacUs.webp')",
+        "contact-us": "url('/contactUs.png')",
       },
     },
   },

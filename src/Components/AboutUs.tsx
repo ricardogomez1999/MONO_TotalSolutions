@@ -7,22 +7,19 @@ export default function AboutUs() {
             Acerca <span className=" font-normal">de Nosotros</span>
           </h1>
           <h2 className=" text-lg md:text-xl font-semibold text-primary">
-            En Mono total solutions
+            En MONO Total Solutions,
           </h2>
           <p className=" text-sm md:text-md text-secondary">
-            Somos una empresa comprometida con ofrecer soluciones integrales y
-            personalizadas para tu negocio. Nos especializamos en brindar una
-            amplia gama de servicios diseñados para satisfacer todas tus
-            necesidades empresariales. Desde la asesoría estratégica hasta la
-            implementación de tecnologías innovadoras, trabajamos contigo para
-            asegurar el crecimiento y éxito de tu empresa.{" "}
+            ofrecemos soluciones integrales en logística y transporte nacional e
+            internacional, alquiler de equipos especializados para mejorar su
+            cadena de suministro, y comercialización de productos. Nos
+            esforzamos por ser el socio estratégico que su empresa necesita para
+            alcanzar sus objetivos, brindando soporte excepcional y soluciones
+            personalizadas. Explore cómo MONO Total Solutions puede ayudar a
+            llevar su empresa al siguiente nivel.
           </p>
         </div>
-        <img
-          className="md:hidden"
-          src="./bgAboutUs.webp"
-          alt="about us image"
-        />
+        <img className="md:hidden" src="./AboutUs.jpeg" alt="about us image" />
       </div>
     </div>
   );

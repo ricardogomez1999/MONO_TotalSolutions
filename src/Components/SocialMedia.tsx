@@ -17,11 +17,11 @@ export default function SocialMedia() {
           <img src="./instaLogo.svg" alt="Instagram logo" className=" w-6" />
         </a>
       </li>
-      {/* <li>
+      <li>
         <a href="#" target="blank_">
           <img src="./linkLogo.svg" alt="LinkedIn logo" className=" w-6" />
         </a>
-      </li> */}
+      </li>
     </ul>
   );
 }
