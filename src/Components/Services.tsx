@@ -1,3 +1,4 @@
+import { Link } from "react-scroll";
 import { services } from "../data";
 import Card from "./Card";
 import Tabs from "./ServicesTabs";
@@ -19,6 +20,17 @@ export default function Services() {
         ))}
       </div>
       <Tabs />
+      <Link
+        to="#contactUs"
+        spy={true}
+        smooth={true}
+        offset={150}
+        duration={500}
+        href="#"
+        className="flex justify-center w-24 mx-auto bg-gradient-to-r from-darkBlue to-lightBlue p-3 my-5 text-white font-semibold rounded-lg"
+      >
+        Cotizar
+      </Link>
     </div>
   );
 }

@@ -7,7 +7,7 @@ type CardProps = {
 export default function Card({ title, img, description }: CardProps) {
   const sentences = description.split(".");
   return (
-    <div className="bg-gray-100 text-white rounded-lg p-10 flex flex-col justify-evenly shadow-lg h-full">
+    <div className="bg-gray-100 text-white rounded-lg p-8 flex flex-col justify-evenly shadow-lg h-[550px]">
       <img src={`${img}.webp`} alt={`imagen de ${img}`} />
       <h1 className="text-center font-bold text-xl text-primary">{title}</h1>
       <p className=" text-lightBlue mt-3 text-sm">

@@ -13,6 +13,7 @@ export default function ContactForm() {
     email: "",
     phone: null,
     serviceType: "Selecciona",
+    message: "",
   };
   const {
     register,
@@ -84,7 +85,7 @@ export default function ContactForm() {
 
         <div>
           <label htmlFor="email" className=" font-normal">
-            Correo empresarial*
+            Correo*
           </label>
           <input
             id="email"
@@ -145,6 +146,21 @@ export default function ContactForm() {
               ))}
             </select>
           </div>
+        </div>
+        <div>
+          <label htmlFor="message" className=" font-normal">
+            ¿En que podemos ayudarte?*
+          </label>
+          <textarea
+            id="message"
+            className=" w-full p-1 border border-gray-300 rounded"
+            {...register("message", {
+              required: "El mensaje es obligatorio",
+            })}
+          />
+          {errors.message && (
+            <ErrorMessage>{errors.message.message}</ErrorMessage>
+          )}
         </div>
       </div>
       <input

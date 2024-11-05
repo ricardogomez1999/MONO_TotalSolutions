@@ -57,22 +57,14 @@ export const serviceTypes = [
   },
   {
     id: 2,
-    content: "FCL",
+    content: "Logistica y transporte",
   },
   {
     id: 3,
-    content: "LCL",
+    content: "Comercializadora",
   },
   {
     id: 4,
-    content: "FTL",
-  },
-  {
-    id: 5,
-    content: "LTL",
-  },
-  {
-    id: 6,
-    content: "Terrestre",
+    content: "Alquiler de equipo",
   },
 ];

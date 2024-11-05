@@ -7,6 +7,7 @@ export type QuoteFormData = {
   email: string;
   phone: number | null;
   serviceType: ServiceType;
+  message: string;
 };
 
 export const averageTypeSchema = z.enum([
