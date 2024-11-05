@@ -18,7 +18,10 @@ export default function SocialMedia() {
         </a>
       </li>
       <li>
-        <a href="#" target="blank_">
+        <a
+          href="https://www.linkedin.com/company/mono-total-solutions/?viewAsMember=true"
+          target="blank_"
+        >
           <img src="./linkLogo.svg" alt="LinkedIn logo" className=" w-6" />
         </a>
       </li>
