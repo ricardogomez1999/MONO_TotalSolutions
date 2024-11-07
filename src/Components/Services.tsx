@@ -24,7 +24,7 @@ export default function Services() {
         to="#contactUs"
         spy={true}
         smooth={true}
-        offset={150}
+        offset={-50}
         duration={500}
         href="#"
         className="flex justify-center w-24 mx-auto bg-gradient-to-r from-darkBlue to-lightBlue p-3 my-5 text-white font-semibold rounded-lg"
