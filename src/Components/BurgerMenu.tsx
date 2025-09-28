@@ -3,6 +3,7 @@ import { Popover, Transition } from "@headlessui/react";
 import { Bars3Icon } from "@heroicons/react/20/solid";
 import SocialMedia from "./SocialMedia";
 import NavLinks from "./NavLinks";
+import LanguageSelector from "./LanguageSelector";
 
 export default function BurgerMenu() {
   return (
@@ -23,6 +24,9 @@ export default function BurgerMenu() {
         <Popover.Panel className="absolute z-10 flex w-screen  lg:max-w-min -translate-x-1/2">
           <div className="w-1/2 rounded-xl bg-white p-2 text-sm font-semibold leading-6 text-gray-900 shadow-lg ring-1 ring-gray-900/5">
             <NavLinks hidden={false} />
+            <div className="my-3">
+              <LanguageSelector variant="mobile" />
+            </div>
             <SocialMedia />
           </div>
         </Popover.Panel>

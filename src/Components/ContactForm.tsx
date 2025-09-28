@@ -1,18 +1,26 @@
 import { useForm } from "react-hook-form";
-import { QuoteFormData } from "../types";
+import { QuoteFormData, ServiceType } from "../types";
 import ErrorMessage from "./ErrorMessage";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
-import { serviceTypes } from "../data";
+import { useTranslation } from "react-i18next";
+
+const serviceTypeOptions: ServiceType[] = [
+  "select",
+  "logistics",
+  "commercial",
+  "rental",
+];
 
 export default function ContactForm() {
-  const initialValues: QuoteFormData = {
+  const { t } = useTranslation();
+  const defaultValues: QuoteFormData = {
     name: "",
     lastname: "",
     company: "",
     email: "",
-    phone: null,
-    serviceType: "Selecciona",
+    phone: "",
+    serviceType: "select",
     message: "",
   };
   const {
@@ -20,7 +28,7 @@ export default function ContactForm() {
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm({ defaultValues: initialValues });
+  } = useForm<QuoteFormData>({ defaultValues });
 
   const handleEmail = (data: QuoteFormData) => {
     emailjs
@@ -31,13 +39,12 @@ export default function ContactForm() {
         import.meta.env.VITE_API_PUBLICID
       )
       .then(
-        (response) => {
-          toast.success(`Message sent successfully`);
-          console.log(response);
-          reset();
+        () => {
+          toast.success(t<string>("form.toast.success"));
+          reset(defaultValues);
         },
-        (error) => {
-          toast.error(`Message not send, try again ${error}`);
+        () => {
+          toast.error(t<string>("form.toast.error"));
         }
       );
   };
@@ -52,14 +59,14 @@ export default function ContactForm() {
         <div className=" md:flex gap-5">
           <div className=" md:w-1/2">
             <label htmlFor="name" className=" font-normal">
-              Nombre*
+              {t("form.fields.name")}
             </label>
             <input
               id="name"
               type="text"
               className=" w-full p-1 border border-gray-300 rounded"
               {...register("name", {
-                required: "El nombre es obligatorio",
+                required: t("form.errors.nameRequired"),
               })}
             />
             {errors.name && <ErrorMessage>{errors.name.message}</ErrorMessage>}
@@ -67,14 +74,14 @@ export default function ContactForm() {
 
           <div className=" md:w-1/2">
             <label htmlFor="lastname" className=" font-normal">
-              Apellido*
+              {t("form.fields.lastname")}
             </label>
             <input
               id="lastname"
               type="text"
               className=" w-full p-1 border border-gray-300 rounded"
               {...register("lastname", {
-                required: "El apellido es obligatorio",
+                required: t("form.errors.lastnameRequired"),
               })}
             />
             {errors.lastname && (
@@ -85,28 +92,28 @@ export default function ContactForm() {
 
         <div>
           <label htmlFor="email" className=" font-normal">
-            Correo*
+            {t("form.fields.email")}
           </label>
           <input
             id="email"
-            type="text"
+            type="email"
             className=" w-full p-1 border border-gray-300 rounded"
             {...register("email", {
-              required: "El correo es obligatorio",
+              required: t("form.errors.emailRequired"),
             })}
           />
           {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
         </div>
         <div>
           <label htmlFor="phone" className=" font-normal">
-            Telefono*
+            {t("form.fields.phone")}
           </label>
           <input
             id="phone"
-            type="text"
+            type="tel"
             className=" w-full p-1 border border-gray-300 rounded"
             {...register("phone", {
-              required: "El telefono es obligatorio",
+              required: t("form.errors.phoneRequired"),
             })}
           />
           {errors.phone && <ErrorMessage>{errors.phone.message}</ErrorMessage>}
@@ -115,14 +122,14 @@ export default function ContactForm() {
         <div className=" md:flex gap-5">
           <div className=" md:w-1/2">
             <label htmlFor="company" className=" font-normal">
-              Empresa*
+              {t("form.fields.company")}
             </label>
             <input
               id="company"
               type="text"
               className=" w-full p-1 border border-gray-300 rounded"
               {...register("company", {
-                required: "La compañia es obligatorio",
+                required: t("form.errors.companyRequired"),
               })}
             />
             {errors.company && (
@@ -131,31 +138,37 @@ export default function ContactForm() {
           </div>
           <div className=" md:w-1/2">
             <label htmlFor="serviceType" className=" font-normal">
-              Tipo de servicio*
+              {t("form.fields.serviceType.label")}
             </label>
             <select
               id="serviceType"
               className=" w-full p-1 bg-white border border-gray-300 rounded"
-              defaultValue={initialValues.serviceType}
+              defaultValue={defaultValues.serviceType}
               {...register("serviceType", {
-                required: "El servicio es obligatorio",
+                validate: (value) =>
+                  value !== "select" || t("form.errors.serviceTypeRequired"),
               })}
             >
-              {serviceTypes.map((item) => (
-                <option key={item.id}>{item.content}</option>
+              {serviceTypeOptions.map((option) => (
+                <option key={option} value={option}>
+                  {t(`form.fields.serviceType.options.${option}`)}
+                </option>
               ))}
             </select>
+            {errors.serviceType && (
+              <ErrorMessage>{errors.serviceType.message}</ErrorMessage>
+            )}
           </div>
         </div>
         <div>
           <label htmlFor="message" className=" font-normal">
-            ¿En que podemos ayudarte?*
+            {t("form.fields.message")}
           </label>
           <textarea
             id="message"
             className=" w-full p-1 border border-gray-300 rounded"
             {...register("message", {
-              required: "El mensaje es obligatorio",
+              required: t("form.errors.messageRequired"),
             })}
           />
           {errors.message && (
@@ -165,7 +178,7 @@ export default function ContactForm() {
       </div>
       <input
         type="submit"
-        value="Enviar"
+        value={t("form.submit")}
         className="bg-primary hover:bg-secondary p-2 text-white cursor-pointer rounded w-fit"
       />
     </form>

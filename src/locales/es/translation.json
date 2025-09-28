@@ -1,0 +1,113 @@
+{
+  "language": {
+    "english": "Inglés",
+    "spanish": "Español",
+    "ariaLabel": "Seleccionar idioma"
+  },
+  "navigation": {
+    "about": "Nosotros",
+    "services": "Servicios",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Haciendo tu día un poco más fácil",
+    "cta": "Contáctanos"
+  },
+  "aboutUs": {
+    "title": "Acerca",
+    "titleHighlight": "de Nosotros",
+    "subtitle": "En MONO Total Solutions,",
+    "description": "ofrecemos soluciones integrales en logística y transporte nacional e internacional, alquiler de equipos especializados para mejorar tu cadena de suministro y comercialización de productos. Nos esforzamos por ser el socio estratégico que tu empresa necesita para alcanzar sus objetivos, brindando soporte excepcional y soluciones personalizadas. Descubre cómo MONO Total Solutions puede ayudar a llevar tu empresa al siguiente nivel."
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "highlight": "Principales",
+    "cards": {
+      "logistics": {
+        "title": "Logística y transporte",
+        "imageAlt": "Servicio de logística y transporte",
+        "description": [
+          "Transporte aéreo, marítimo y terrestre, nacional e internacional.",
+          "Transporte terrestre, LTL y FTL.",
+          "Transporte dedicado: hotshot, sprinter, plataforma y caja refrigerada.",
+          "Almacenamiento a corto y largo plazo.",
+          "Agencia aduanal."
+        ]
+      },
+      "commercial": {
+        "title": "Comercializadora",
+        "imageAlt": "Servicio de comercializadora",
+        "description": [
+          "Distribución de diversos productos.",
+          "Venta al por mayor y al por menor.",
+          "Gestión de inventarios y logística de distribución.",
+          "Servicios de importación y exportación.",
+          "Atención personalizada y gestión de pedidos."
+        ]
+      },
+      "rental": {
+        "title": "Alquiler de equipo especializado",
+        "imageAlt": "Servicio de alquiler de equipo especializado",
+        "description": [
+          "Renta de mulas de patio.",
+          "Renta de cajas secas para almacenamiento.",
+          "Renta de montacargas.",
+          "Renta de plataformas elevadoras."
+        ]
+      }
+    },
+    "cta": "Cotizar"
+  },
+  "allYouNeed": {
+    "title": "Todo lo que necesitas en un mismo lugar",
+    "bullets": [
+      "Operaciones centralizadas: gestiona todas tus operaciones logísticas desde un solo lugar, desde cotizaciones hasta pagos, facturas y más.",
+      "Solución integral: cubrimos todas tus necesidades logísticas, desde transporte aéreo y terrestre hasta almacenamiento y última milla.",
+      "Equipo especializado: un equipo comprometido de expertos te acompaña en todo momento, asegurando un servicio de calidad."
+    ]
+  },
+  "contactSection": {
+    "titleHighlight": "Llena el formulario",
+    "titleSuffix": "y nosotros nos pondremos en contacto contigo.",
+    "emailLine1": "También puedes mandarnos un email",
+    "emailLine2": "dando clic aquí."
+  },
+  "form": {
+    "submit": "Enviar",
+    "fields": {
+      "name": "Nombre*",
+      "lastname": "Apellido*",
+      "email": "Correo*",
+      "phone": "Teléfono*",
+      "company": "Empresa*",
+      "serviceType": {
+        "label": "Tipo de servicio*",
+        "options": {
+          "select": "Selecciona",
+          "logistics": "Logística y transporte",
+          "commercial": "Comercializadora",
+          "rental": "Alquiler de equipo"
+        }
+      },
+      "message": "¿En qué podemos ayudarte?*"
+    },
+    "errors": {
+      "nameRequired": "El nombre es obligatorio",
+      "lastnameRequired": "El apellido es obligatorio",
+      "emailRequired": "El correo es obligatorio",
+      "phoneRequired": "El teléfono es obligatorio",
+      "companyRequired": "La compañía es obligatoria",
+      "serviceTypeRequired": "El servicio es obligatorio",
+      "messageRequired": "El mensaje es obligatorio"
+    },
+    "toast": {
+      "success": "Mensaje enviado correctamente",
+      "error": "No se pudo enviar el mensaje, inténtalo nuevamente."
+    }
+  },
+  "footer": {
+    "emailLine1": "También puedes mandarnos",
+    "emailLine2": "un email dando clic aquí.",
+    "rights": "Todos los derechos reservados @{{year}}"
+  }
+}

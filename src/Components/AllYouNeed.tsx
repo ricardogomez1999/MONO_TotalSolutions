@@ -1,32 +1,29 @@
 import { CheckBadgeIcon } from "@heroicons/react/20/solid";
+import { useTranslation } from "react-i18next";
 
 export default function AllYouNeed() {
+  const { t } = useTranslation();
+  const bulletTranslations = t<string[] | string>("allYouNeed.bullets", {
+    returnObjects: true,
+  });
+  const bullets = Array.isArray(bulletTranslations)
+    ? bulletTranslations
+    : [bulletTranslations];
   return (
     <div className="container mx-auto max-w-7xl py-10">
       <h1 className=" my-10 text-4xl font-bold text-center text-primary">
-        Todo lo que necesitas en un mismo lugar
+        {t("allYouNeed.title")}
       </h1>
       <div className=" flex flex-col md:flex-row p-5">
         <div className="h-96 bg-all-youneed bg-cover bg-center md:w-1/2 rounded-lg shadow-lg"></div>
         <div className=" md:w-1/2 p-5">
           <ul className="md:px-8 flex flex-col gap-5">
-            <li className=" flex gap-2 items-start ">
-              <CheckBadgeIcon className="w-12 text-lightBlue" />
-              Operaciones Centralizadas: Gestiona todas tus operaciones
-              logísticas desde un solo lugar, desde cotizaciones hasta pagos,
-              facturas y más.
-            </li>
-            <li className=" flex gap-2 items-start">
-              <CheckBadgeIcon className="w-12 text-lightBlue" />
-              Solución Integral: Cubrimos todas tus necesidades logísticas,
-              desde transporte aéreo y terrestre hasta almacenamiento y última
-              milla.
-            </li>
-            <li className=" flex gap-2 items-start">
-              <CheckBadgeIcon className="w-12 text-lightBlue" />
-              Equipo Especializado: Un equipo comprometido de expertos te
-              acompaña en todo momento, asegurando un servicio de calidad.
-            </li>
+            {bullets.map((bullet: string) => (
+              <li key={bullet} className=" flex gap-2 items-start ">
+                <CheckBadgeIcon className="w-12 text-lightBlue" />
+                {bullet}
+              </li>
+            ))}
           </ul>
         </div>
       </div>

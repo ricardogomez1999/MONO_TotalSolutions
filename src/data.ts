@@ -1,70 +1,23 @@
 export const services = [
   {
-    name: "Logistica y transporte",
+    id: "logistics",
     img: "mulaSeca",
-    description:
-      "Transporte Aéreo, Marítimo y Terrestre, Nacional e Internacional. Transporte Terrestre, LTL y FTL. Transporte Dedicado, HotShot - Sprinter - Plataforma, Caja Refrigerada. Almacenamiento a Corto y Largo Plazo. Agencia Aduanal",
+    titleKey: "services.cards.logistics.title",
+    descriptionKey: "services.cards.logistics.description",
+    imageAltKey: "services.cards.logistics.imageAlt",
   },
   {
-    name: "Comercializadora",
+    id: "commercial",
     img: "flete",
-    description:
-      "Distribución de Diversos Productos. Venta al por Mayor y al por Menor. Gestión de inventarios y Lógistica de Distribución. Servicios de Importación y Exportación. Atención Personalizada y Gestión de Pedidos",
+    titleKey: "services.cards.commercial.title",
+    descriptionKey: "services.cards.commercial.description",
+    imageAltKey: "services.cards.commercial.imageAlt",
   },
   {
-    name: "Alquiler de equipo especializado",
+    id: "rental",
     img: "cajaSeca",
-    description:
-      "Renta de Mulas de Patio. Renta de Cajas Secas para Almacenamiento. Renta de Montacargas. Renta de Plataformas Elevadoras",
-  },
-];
-
-export const monthlyAverage = [
-  {
-    id: 1,
-    content: "Selecciona",
-  },
-  {
-    id: 2,
-    content: "La empresa no tiene carga mensual",
-  },
-  {
-    id: 3,
-    content: "Menos de $1,000 USD",
-  },
-  {
-    id: 4,
-    content: "De $1,000 a $10,000 USD",
-  },
-  {
-    id: 5,
-    content: "De $11,000 a $20,000 USD",
-  },
-  {
-    id: 6,
-    content: "De $21,000 a $100,000 USD",
-  },
-  {
-    id: 7,
-    content: "Más de $100,000 USD",
-  },
-];
-
-export const serviceTypes = [
-  {
-    id: 1,
-    content: "Selecciona",
-  },
-  {
-    id: 2,
-    content: "Logistica y transporte",
-  },
-  {
-    id: 3,
-    content: "Comercializadora",
-  },
-  {
-    id: 4,
-    content: "Alquiler de equipo",
+    titleKey: "services.cards.rental.title",
+    descriptionKey: "services.cards.rental.description",
+    imageAltKey: "services.cards.rental.imageAlt",
   },
 ];

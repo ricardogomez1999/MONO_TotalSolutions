@@ -2,8 +2,10 @@ import { animateScroll } from "react-scroll";
 import NavLinks from "./NavLinks";
 import SocialMedia from "./SocialMedia";
 import { InboxArrowDownIcon } from "@heroicons/react/20/solid";
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
+  const { t } = useTranslation();
   const options = {
     duration: 500,
     smooth: true,
@@ -33,20 +35,20 @@ export default function Footer() {
 
         <a
           href="mailto:info@monots.com"
-          className="gap-5 items-center p-4 
-           group cursor-pointer justify-center transition-all"
+          className="gap-5 items-center p-4 group cursor-pointer justify-center transition-all"
+          rel="noreferrer"
         >
           <h2 className=" text-center group-hover:text-lightBlue">
-            Tambien puedes mandarnos{" "}
+            {t("footer.emailLine1")}
           </h2>
           <h2 className=" text-center group-hover:text-lightBlue">
-            un email dando click aqui!
+            {t("footer.emailLine2")}
           </h2>
 
           <InboxArrowDownIcon className=" text-white text-center flex w-full h-8 group-hover:text-lightBlue" />
         </a>
       </div>
-      <p className=" my-10">All right reserved @{new Date().getFullYear()}</p>
+      <p className=" my-10">{t("footer.rights", { year: new Date().getFullYear() })}</p>
     </footer>
   );
 }
