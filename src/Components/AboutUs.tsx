@@ -7,7 +7,8 @@ export default function AboutUs() {
       <div className=" md:h-96 flex flex-col md:flex-row-reverse justify-around items-center">
         <div className="p-4 md:pe-36 mt-8 md:w-1/2 md:bg-gray-100 md:bg-opacity-70 rounded-lg md:p-10">
           <h1 className="text-3xl md:text-4xl font-bold text-primary">
-            {t("aboutUs.title")} <span className=" font-normal">{t("aboutUs.titleHighlight")}</span>
+            {t("aboutUs.title")}{" "}
+            <span className=" font-normal">{t("aboutUs.titleHighlight")}</span>
           </h1>
           <h2 className=" text-lg md:text-xl font-semibold text-primary">
             {t("aboutUs.subtitle")}

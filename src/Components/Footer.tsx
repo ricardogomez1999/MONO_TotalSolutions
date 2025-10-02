@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 
 export default function Footer() {
   const { t } = useTranslation();
+
   const options = {
     duration: 500,
     smooth: true,
@@ -48,7 +49,9 @@ export default function Footer() {
           <InboxArrowDownIcon className=" text-white text-center flex w-full h-8 group-hover:text-lightBlue" />
         </a>
       </div>
-      <p className=" my-10">{t("footer.rights", { year: new Date().getFullYear() })}</p>
+      <p className=" my-10">
+        {t("footer.rights", { year: new Date().getFullYear() })}
+      </p>
     </footer>
   );
 }

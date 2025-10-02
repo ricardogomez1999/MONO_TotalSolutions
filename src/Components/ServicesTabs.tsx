@@ -4,7 +4,11 @@ import { services } from "../data";
 import Card from "./Card";
 
 export default function Tabs() {
-  const { t } = useTranslation();
+  const { t, ready } = useTranslation();
+
+  if (!ready) {
+    return null; // or a loading spinner
+  }
   return (
     <div className="md:hidden p-5">
       <TabGroup>
@@ -20,7 +24,9 @@ export default function Tabs() {
                   title={t(service.titleKey)}
                   img={service.img}
                   imgAlt={t(service.imageAltKey)}
-                  description={Array.isArray(description) ? description : [description]}
+                  description={
+                    Array.isArray(description) ? description : [description]
+                  }
                 />
               </TabPanel>
             );

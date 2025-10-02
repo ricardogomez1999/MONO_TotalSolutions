@@ -3,11 +3,12 @@ import { useTranslation } from "react-i18next";
 
 export default function Hero() {
   const { t } = useTranslation();
+
   return (
     <div className=" h-screen md:h-auto flex items-center container mx-auto md:py-16 p-5 transition-all">
       <div className="flex flex-col md:w-1/2">
         <h1 className=" text-white/[.5] text-pretty text-5xl md:text-8xl uppercase font-bold">
-          {t("hero.title")}
+          Making your day a little easier
         </h1>
 
         <a

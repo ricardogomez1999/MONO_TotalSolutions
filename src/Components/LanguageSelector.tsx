@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { useTranslation } from "react-i18next";
+import { useLanguage } from "../contexts/LanguageContext";
 
 type LanguageSelectorProps = {
   variant?: "desktop" | "mobile";
@@ -12,11 +13,15 @@ const languages = [
   { code: "es", flag: "/flag-mx.svg", labelKey: "language.spanish" },
 ];
 
-export default function LanguageSelector({ variant = "desktop" }: LanguageSelectorProps) {
-  const { t, i18n } = useTranslation();
-  const currentLanguage = (i18n.language ?? "en").split("-")[0];
+export default function LanguageSelector({
+  variant = "desktop",
+}: LanguageSelectorProps) {
+  const { t } = useTranslation();
+  const { currentLanguage, changeLanguage } = useLanguage();
+
   const activeLanguage =
-    languages.find((language) => language.code === currentLanguage) ?? languages[0];
+    languages.find((language) => language.code === currentLanguage) ??
+    languages[0];
 
   const buttonClasses =
     variant === "desktop"
@@ -31,7 +36,10 @@ export default function LanguageSelector({ variant = "desktop" }: LanguageSelect
   const itemClasses = "flex items-center gap-2 px-3 py-2 hover:bg-gray-100";
 
   return (
-    <Menu as="div" className={`relative ${variant === "mobile" ? "w-full" : ""}`}>
+    <Menu
+      as="div"
+      className={`relative ${variant === "mobile" ? "w-full" : ""}`}
+    >
       <Menu.Button
         aria-label={t("language.ariaLabel")}
         className={buttonClasses}
@@ -62,7 +70,7 @@ export default function LanguageSelector({ variant = "desktop" }: LanguageSelect
                 <button
                   type="button"
                   onClick={() => {
-                    void i18n.changeLanguage(language.code);
+                    changeLanguage(language.code);
                   }}
                   className={`${itemClasses} ${
                     language.code === activeLanguage.code || active

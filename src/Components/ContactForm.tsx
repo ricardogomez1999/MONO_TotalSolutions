@@ -14,6 +14,7 @@ const serviceTypeOptions: ServiceType[] = [
 
 export default function ContactForm() {
   const { t } = useTranslation();
+
   const defaultValues: QuoteFormData = {
     name: "",
     lastname: "",

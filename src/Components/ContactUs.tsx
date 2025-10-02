@@ -8,7 +8,9 @@ export default function ContactUs() {
     <div className=" md:w-3/4 mx-auto gap-10 justify-center items-center">
       <div className=" flex flex-col w-full items-center">
         <h1 className=" text-2xl font-bold text-center">
-          <span className=" text-lightBlue">{t("contactSection.titleHighlight")}</span>{" "}
+          <span className=" text-lightBlue">
+            {t("contactSection.titleHighlight")}
+          </span>{" "}
           {t("contactSection.titleSuffix")}
         </h1>
         <a

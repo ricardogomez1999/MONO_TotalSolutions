@@ -6,7 +6,11 @@ type NavLinksProps = {
 };
 
 export default function NavLinks({ hidden }: NavLinksProps) {
-  const { t } = useTranslation();
+  const { t, ready } = useTranslation();
+
+  if (!ready) {
+    return null; // or a loading spinner
+  }
   return (
     <ul
       className={

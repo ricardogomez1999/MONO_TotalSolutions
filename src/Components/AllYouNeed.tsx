@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 
 export default function AllYouNeed() {
   const { t } = useTranslation();
+
   const bulletTranslations = t<string[] | string>("allYouNeed.bullets", {
     returnObjects: true,
   });
