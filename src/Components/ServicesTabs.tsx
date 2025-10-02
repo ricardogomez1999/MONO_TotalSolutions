@@ -4,11 +4,8 @@ import { services } from "../data";
 import Card from "./Card";
 
 export default function Tabs() {
-  const { t, ready } = useTranslation();
+  const { t } = useTranslation();
 
-  if (!ready) {
-    return null; // or a loading spinner
-  }
   return (
     <div className="md:hidden p-5">
       <TabGroup>
