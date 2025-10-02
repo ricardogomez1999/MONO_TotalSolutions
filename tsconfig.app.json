@@ -16,6 +16,10 @@
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react-jsx",
+    "paths": {
+      "i18next": ["./src/lib/i18next"],
+      "react-i18next": ["./src/lib/react-i18next"]
+    },
 
     /* Linting */
     "strict": true,

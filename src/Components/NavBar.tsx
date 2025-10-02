@@ -3,6 +3,7 @@ import { animateScroll } from "react-scroll";
 import BurgerMenu from "./BurgerMenu";
 import SocialMedia from "./SocialMedia";
 import NavLinks from "./NavLinks";
+import LanguageSelector from "./LanguageSelector";
 
 export default function NavBar() {
   const [header, setHeader] = useState(false);
@@ -51,7 +52,8 @@ export default function NavBar() {
         </h1>
       </a>
       <NavLinks hidden={true} />
-      <div className=" hidden md:flex">
+      <div className=" hidden md:flex items-center gap-4">
+        <LanguageSelector />
         <SocialMedia />
       </div>
 

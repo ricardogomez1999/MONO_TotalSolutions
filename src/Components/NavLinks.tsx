@@ -1,10 +1,16 @@
 import { Link } from "react-scroll";
+import { useTranslation } from "react-i18next";
 
 type NavLinksProps = {
   hidden: boolean;
 };
 
 export default function NavLinks({ hidden }: NavLinksProps) {
+  const { t, ready } = useTranslation();
+
+  if (!ready) {
+    return null; // or a loading spinner
+  }
   return (
     <ul
       className={
@@ -22,7 +28,7 @@ export default function NavLinks({ hidden }: NavLinksProps) {
           duration={500}
           href="#"
         >
-          Nosotros
+          {t("navigation.about")}
         </Link>
       </li>
       <li>
@@ -34,7 +40,7 @@ export default function NavLinks({ hidden }: NavLinksProps) {
           duration={500}
           href="#"
         >
-          Servicios
+          {t("navigation.services")}
         </Link>
       </li>
       <li>
@@ -46,7 +52,7 @@ export default function NavLinks({ hidden }: NavLinksProps) {
           duration={500}
           href="#"
         >
-          Contacto
+          {t("navigation.contact")}
         </Link>
       </li>
     </ul>

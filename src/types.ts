@@ -5,38 +5,24 @@ export type QuoteFormData = {
   lastname: string;
   company: string;
   email: string;
-  phone: number | null;
+  phone: string;
   serviceType: ServiceType;
   message: string;
 };
 
-export const averageTypeSchema = z.enum([
-  "Selecciona",
-  "La empresa no tiene carga mensual",
-  "Menos de $1,000 USD",
-  "De $1,000 a $10,000 USD",
-  "De $11,000 a $20,000 USD",
-  "De $21,000 a $100,000 USD",
-  "Más de $100,000 USD",
-]);
-
-export type AverageType = z.infer<typeof averageTypeSchema>;
-
 export const serviceTypeSchema = z.enum([
-  "Selecciona",
-  "FCL",
-  "LCL",
-  "FTL",
-  "LTL",
-  "Aéreo",
-  "Terrestre",
-  "Marítimo",
+  "select",
+  "logistics",
+  "commercial",
+  "rental",
 ]);
 
 export type ServiceType = z.infer<typeof serviceTypeSchema>;
 
 export type Service = {
-  name: string;
+  id: string;
   img: string;
-  description: string;
+  titleKey: string;
+  descriptionKey: string;
+  imageAltKey: string;
 };
