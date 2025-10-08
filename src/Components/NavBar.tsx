@@ -46,7 +46,11 @@ export default function NavBar() {
         onClick={handleOnClick}
         className=" flex justify-center items-center"
       >
-        <img src="./whiteLogo.png" alt="logo" className=" w-14 md:w-24" />
+        <img
+          src="https://res.cloudinary.com/dnrdf85ss/image/upload/v1759941004/samples/Mono/whiteLogo_aywkmf.png"
+          alt="logo"
+          className=" w-14 md:w-24"
+        />
         <h1 className=" text-sm font-bold">
           MONO <span className=" font-light">Total Solutions</span>
         </h1>

@@ -17,7 +17,11 @@ export default function AboutUs() {
             {t("aboutUs.description")}
           </p>
         </div>
-        <img className="md:h-80" src="./AboutUs.jpeg" alt="about us image" />
+        <img
+          className="md:h-80"
+          src="https://res.cloudinary.com/dnrdf85ss/image/upload/v1759940997/samples/Mono/AboutUs_hyj5qq.jpg"
+          alt="about us image"
+        />
       </div>
     </div>
   );
