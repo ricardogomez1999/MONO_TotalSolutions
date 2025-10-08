@@ -31,7 +31,7 @@ export default function ContactUs() {
         <div className="w-1/2 h-full md:flex flex-col gap-5 hidden">
           <img
             className=" rounded-s-xl shadow-2xl h-full w-full"
-            src="/contactUs.webp"
+            src="https://res.cloudinary.com/dnrdf85ss/image/upload/v1759940997/samples/Mono/contactUs_almewb.webp"
             alt="contact us image"
           />
         </div>

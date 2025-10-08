@@ -22,7 +22,11 @@ export default function Hero() {
         </a>
       </div>
       <div className="hidden md:flex w-1/2 justify-center items-center">
-        <img className=" w-3/4" src="./heroGraphic.webp" alt="Hero Graphic" />
+        <img
+          className=" w-3/4"
+          src="https://res.cloudinary.com/dnrdf85ss/image/upload/v1759941001/samples/Mono/heroGraphic_pw1l0a.webp"
+          alt="Hero Graphic"
+        />
       </div>
     </div>
   );

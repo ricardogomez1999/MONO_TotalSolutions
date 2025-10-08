@@ -6,7 +6,11 @@ export default function SocialMedia() {
           href="https://www.facebook.com/profile.php?id=61561279254390"
           target="blank_"
         >
-          <img src="./fbLogo.svg" alt="facebook logo" className=" w-6" />
+          <img
+            src="https://res.cloudinary.com/dnrdf85ss/image/upload/v1759940998/samples/Mono/fbLogo_tqrcyi.svg"
+            alt="facebook logo"
+            className=" w-6"
+          />
         </a>
       </li>
       <li>
@@ -14,7 +18,11 @@ export default function SocialMedia() {
           href="https://www.instagram.com/mono_totalsolutions/"
           target="blank_"
         >
-          <img src="./instaLogo.svg" alt="Instagram logo" className=" w-6" />
+          <img
+            src="https://res.cloudinary.com/dnrdf85ss/image/upload/v1759941001/samples/Mono/instaLogo_nlme2a.svg"
+            alt="Instagram logo"
+            className=" w-6"
+          />
         </a>
       </li>
       <li>
@@ -22,7 +30,11 @@ export default function SocialMedia() {
           href="https://www.linkedin.com/company/mono-total-solutions/?viewAsMember=true"
           target="blank_"
         >
-          <img src="./linkLogo.svg" alt="LinkedIn logo" className=" w-6" />
+          <img
+            src="https://res.cloudinary.com/dnrdf85ss/image/upload/v1759941002/samples/Mono/linkLogo_nnxu6m.svg"
+            alt="LinkedIn logo"
+            className=" w-6"
+          />
         </a>
       </li>
     </ul>
