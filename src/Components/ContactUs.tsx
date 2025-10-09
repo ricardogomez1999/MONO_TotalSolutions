@@ -1,6 +1,7 @@
 import { InboxArrowDownIcon } from "@heroicons/react/20/solid";
 import { useTranslation } from "react-i18next";
 import ContactForm from "./ContactForm";
+import { images } from "../config/images";
 
 export default function ContactUs() {
   const { t } = useTranslation();
@@ -31,7 +32,7 @@ export default function ContactUs() {
         <div className="w-1/2 h-full md:flex flex-col gap-5 hidden">
           <img
             className=" rounded-s-xl shadow-2xl h-full w-full"
-            src="https://res.cloudinary.com/dnrdf85ss/image/upload/v1759940997/samples/Mono/contactUs_almewb.webp"
+            src={images.contactUs.main}
             alt="contact us image"
           />
         </div>

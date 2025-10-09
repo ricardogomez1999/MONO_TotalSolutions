@@ -4,6 +4,7 @@ import BurgerMenu from "./BurgerMenu";
 import SocialMedia from "./SocialMedia";
 import NavLinks from "./NavLinks";
 import LanguageSelector from "./LanguageSelector";
+import { images } from "../config/images";
 
 export default function NavBar() {
   const [header, setHeader] = useState(false);
@@ -46,11 +47,7 @@ export default function NavBar() {
         onClick={handleOnClick}
         className=" flex justify-center items-center"
       >
-        <img
-          src="https://res.cloudinary.com/dnrdf85ss/image/upload/v1759941004/samples/Mono/whiteLogo_aywkmf.png"
-          alt="logo"
-          className=" w-14 md:w-24"
-        />
+        <img src={images.logo.white} alt="logo" className=" w-14 md:w-24" />
         <h1 className=" text-sm font-bold">
           MONO <span className=" font-light">Total Solutions</span>
         </h1>
