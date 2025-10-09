@@ -1,3 +1,5 @@
+import { images } from "../config/images";
+
 export default function SocialMedia() {
   return (
     <ul className=" mx-auto p-1 rounded-lg bg-primary md:bg-transparent flex gap-2 w-1/2 md:w-full md:p-0">
@@ -7,7 +9,7 @@ export default function SocialMedia() {
           target="blank_"
         >
           <img
-            src="https://res.cloudinary.com/dnrdf85ss/image/upload/v1759940998/samples/Mono/fbLogo_tqrcyi.svg"
+            src={images.social.facebook}
             alt="facebook logo"
             className=" w-6"
           />
@@ -19,7 +21,7 @@ export default function SocialMedia() {
           target="blank_"
         >
           <img
-            src="https://res.cloudinary.com/dnrdf85ss/image/upload/v1759941001/samples/Mono/instaLogo_nlme2a.svg"
+            src={images.social.instagram}
             alt="Instagram logo"
             className=" w-6"
           />
@@ -31,7 +33,7 @@ export default function SocialMedia() {
           target="blank_"
         >
           <img
-            src="https://res.cloudinary.com/dnrdf85ss/image/upload/v1759941002/samples/Mono/linkLogo_nnxu6m.svg"
+            src={images.social.linkedin}
             alt="LinkedIn logo"
             className=" w-6"
           />

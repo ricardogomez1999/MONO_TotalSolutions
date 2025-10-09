@@ -1,7 +1,10 @@
 import { useTranslation } from "react-i18next";
+import { useImagesHook } from "../hooks/useImages";
 
 export default function AboutUs() {
   const { t } = useTranslation();
+  const images = useImagesHook();
+
   return (
     <div className=" p-5 md:bg-about-us bg-cover bg-center flex justify-end md:w-3/4 mx-auto my-10 md:rounded-lg md:shadow-lg">
       <div className=" md:h-96 flex flex-col md:flex-row-reverse justify-around items-center">
@@ -19,7 +22,7 @@ export default function AboutUs() {
         </div>
         <img
           className="md:h-80"
-          src="https://res.cloudinary.com/dnrdf85ss/image/upload/v1759940997/samples/Mono/AboutUs_hyj5qq.jpg"
+          src={images.aboutUs.main}
           alt="about us image"
         />
       </div>

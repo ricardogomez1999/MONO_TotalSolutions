@@ -3,14 +3,15 @@ import { Menu, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../contexts/LanguageContext";
+import { images } from "../config/images";
 
 type LanguageSelectorProps = {
   variant?: "desktop" | "mobile";
 };
 
 const languages = [
-  { code: "en", flag: "/flag-us.svg", labelKey: "language.english" },
-  { code: "es", flag: "/flag-mx.svg", labelKey: "language.spanish" },
+  { code: "en", flag: images.flags.us, labelKey: "language.english" },
+  { code: "es", flag: images.flags.mx, labelKey: "language.spanish" },
 ];
 
 export default function LanguageSelector({
