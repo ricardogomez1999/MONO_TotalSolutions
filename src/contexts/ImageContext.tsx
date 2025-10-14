@@ -19,6 +19,14 @@ interface ImageContextType {
 
 const ImageContext = createContext<ImageContextType | undefined>(undefined);
 
+export function useImages() {
+  const context = useContext(ImageContext);
+  if (context === undefined) {
+    throw new Error("useImages must be used within an ImageProvider");
+  }
+  return context;
+}
+
 interface ImageProviderProps {
   children: ReactNode;
 }
@@ -70,12 +78,4 @@ export const ImageProvider: React.FC<ImageProviderProps> = ({ children }) => {
   return (
     <ImageContext.Provider value={value}>{children}</ImageContext.Provider>
   );
-};
-
-export const useImages = () => {
-  const context = useContext(ImageContext);
-  if (context === undefined) {
-    throw new Error("useImages must be used within an ImageProvider");
-  }
-  return context;
 };
