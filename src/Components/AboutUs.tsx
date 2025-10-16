@@ -29,7 +29,7 @@ export default function AboutUs() {
           </p>
         </div>
         <img
-          className=" h-full md:w-1/2 object-contain"
+          className=" md:h-full md:w-1/2 object-contain"
           src={images.aboutUs.main}
           alt="about us image"
         />
