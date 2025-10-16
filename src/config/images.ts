@@ -6,7 +6,7 @@ export const images = {
 
   hero: {
     graphic:
-      "https://res.cloudinary.com/dnrdf85ss/image/upload/v1760045940/samples/Mono/Hero_1000x1000_jhsirz.png",
+      "https://res.cloudinary.com/dnrdf85ss/image/upload/v1759940999/samples/Mono/flete_ifryhl.webp",
   },
 
   aboutUs: {
