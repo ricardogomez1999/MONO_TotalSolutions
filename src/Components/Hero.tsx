@@ -1,10 +1,8 @@
 import { ArrowRightIcon } from "@heroicons/react/20/solid";
 import { useTranslation } from "react-i18next";
-import { useImagesHook } from "../hooks/useImages";
 
 export default function Hero() {
   const { t } = useTranslation();
-  const images = useImagesHook();
 
   return (
     <div className=" h-screen md:h-auto flex items-center container mx-auto md:py-16 p-5 transition-all">
@@ -22,9 +20,6 @@ export default function Hero() {
           {t("hero.cta")}
           <ArrowRightIcon className=" w-5 group-hover:w-6 transition-all" />
         </a>
-      </div>
-      <div className="hidden md:flex w-fit justify-center items-center">
-        <img className=" w-3/4" src={images.hero.graphic} alt="Hero Graphic" />
       </div>
     </div>
   );
